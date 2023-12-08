@@ -6,7 +6,7 @@ from io import StringIO
 
 app = Flask(__name__)
 
-# Set up logging
+# log filw
 logging.basicConfig(filename='app.log', level=logging.INFO)
 
 MONGODB_ATLAS_API_URL = "your_mongodb_atlas_api_url_here"
@@ -15,16 +15,15 @@ API_KEY = "your_api_key_here"
 @app.route('/export_csv', methods=['GET'])
 def export_csv():
     try:
-        # Make API call to MongoDB Atlas to fetch data
         headers = {
             "Authorization": f"Bearer {API_KEY}"
         }
         response = requests.get(MONGODB_ATLAS_API_URL, headers=headers)
 
         if response.status_code == 200:
-            data = response.json()  # Assuming the response is in JSON format
+            data = response.json()  
 
-            # Define the fields to be included in the CSV
+            # Define the fields to be included/mapped in the CSV
             fields = [
                 "cloudID",
                 "accountname",
@@ -48,7 +47,7 @@ def export_csv():
             csv_writer = csv.DictWriter(csv_output, fieldnames=fields)
             csv_writer.writeheader()
             for account in data:
-                # Mapping keys to the desired fields
+                # Mapping 
                 mapped_account = {
                     "cloudID": account.get("cloudID"),
                     "accountname": account.get("accountname"),
