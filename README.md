@@ -1,5 +1,5 @@
 MongoDB Atlas data retrieving using API and data mapping, how to run the app.
-
+In this rep you wil find an app to retrive the data using the db connection and also just API.
 
   Install Flask and Requests libraries by running the following commands in your terminal or install as packages.
         
