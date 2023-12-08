@@ -1,4 +1,4 @@
-MongoDB Atlas data retrieving using API and data mapping
+MongoDB Atlas data retrieving using API and data mapping, how to run the app.
 
 
   Install Flask and Requests libraries by running the following commands in your terminal or install as packages.
