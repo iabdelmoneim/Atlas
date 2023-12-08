@@ -1,8 +1,5 @@
 MongoDB Atlas data retrieving using API and data mapping
 
-Sure, here are the steps you can include in your README file on GitHub:
-
-### Instructions to Run the Flask App for Exporting MongoDB Atlas Data to CSV
 
   Install Flask and Requests libraries by running the following commands in your terminal or install as packages.
         
